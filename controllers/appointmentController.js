@@ -3,14 +3,13 @@ const mongoose = require("mongoose");
 
 // Create new appointment
 const createAppointment = async (req, res) => {
-  const { service, email, name, date, time } = req.body;
+  const { email, fullName, date, time } = req.body;
 
   // add doc to db
   try {
     const appointment = await Appointment.create({
-      service,
       email,
-      name,
+      fullName,
       date,
       time,
     });

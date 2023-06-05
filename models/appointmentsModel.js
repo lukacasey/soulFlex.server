@@ -4,15 +4,11 @@ const Schema = mongoose.Schema;
 
 const appointmentsSchema = new Schema(
   {
-    service: {
-      type: String,
-      required: true,
-    },
     email: {
       type: String,
       required: true,
     },
-    name: {
+    fullName: {
       type: String,
       required: true,
     },
